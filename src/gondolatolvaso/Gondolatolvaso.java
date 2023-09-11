@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Gondolatolvaso {
 
     static Scanner sc = new Scanner(System.in);
-    static String[] tomb = new String[22];
+    static String[] pakli = new String[22];
     
     public static void main(String[] args) {
         Kirak();
@@ -26,12 +26,11 @@ public class Gondolatolvaso {
         String[] ertek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
         
         for (int i = 0; i < szinek.length; i++) {
-            for (int j = 0; j < ertek.length; j++) {
-             
-                System.out.println(ertek[j]+"."+szinek[i]);
-                if(szinek[i].equals("M") && ertek[j].equals("X")){
-                    
+            for (int j = 0; j < ertek.length && !(szinek[i].equals("M") && ertek[j].equals("X")); j++) {
+                if(j % 3 == 0){
+                    System.out.println("\n");
                 }
+                System.out.print(ertek[j]+"."+szinek[i] + "\t\t");
             }
         }
     }
