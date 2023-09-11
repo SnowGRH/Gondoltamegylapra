@@ -2,7 +2,7 @@ package gondolatolvaso;
 import java.util.Scanner;
 public class Gondolatolvaso {
 
-    static String[] pakli = new String[22];
+    static String[] pakli = new String[21];
     
     public static void main(String[] args) {
         Kirak();
@@ -17,7 +17,7 @@ public class Gondolatolvaso {
         String[] ertek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
         int j = 0;
         for (String szin : szinek) {
-            for (int i = 0; j < 22 && i<ertek.length; i++) {
+            for (int i = 0; j < 21 && i<ertek.length; i++) {
                 pakli[j++] = ertek[i]+"."+szin;
             }
         }
