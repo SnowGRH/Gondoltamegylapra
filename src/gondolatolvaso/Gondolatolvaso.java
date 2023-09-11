@@ -16,6 +16,7 @@ public class Gondolatolvaso {
     
     public static void main(String[] args) {
         Kirak();
+        Melyik();
         Kever();
         EzVolt();
     }
@@ -33,13 +34,15 @@ public class Gondolatolvaso {
                 System.out.print(ertek[j]+"."+szinek[i] + "\t\t");
             }
         }
+        System.out.println("\n");
     }
     
     public static int Melyik(){
         
+        System.out.println("melyik oszlop (1-3) : ");
         int oszlop = sc.nextInt();
-        
-        if(oszlop < 1 || oszlop > 3){
+        while(oszlop < 1 || oszlop > 3){
+            System.out.println("melyik oszlop (1-3) : ");
             oszlop = sc.nextInt();
         }
         return oszlop;
