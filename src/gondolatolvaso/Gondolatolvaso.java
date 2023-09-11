@@ -28,10 +28,7 @@ public class Gondolatolvaso {
         
         for (int i = 0; i < szinek.length; i++) {
             for (int j = 0; j < ertek.length && !(szinek[i].equals("M") && ertek[j].equals("X")); j++) {
-                if(j % 3 == 0){
-                    System.out.println("\n");
-                }
-                System.out.print(ertek[j]+"."+szinek[i] + "\t\t");
+                pakli[j] += ertek[j]+"."+szinek[i];
             }
         }
         System.out.println("\n");
