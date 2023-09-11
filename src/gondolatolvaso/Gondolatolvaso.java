@@ -25,15 +25,18 @@ public class Gondolatolvaso {
     public static void Kirak(){
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+        int j = 0;
+        for (String szin : szinek) {
+            for (int i = 0; j < 22 && i<ertek.length; i++) {
+                pakli[j++] = ertek[i]+"."+szin;
+            }
+        }
         
-        for (int i = 0; i < szinek.length; i++) {
-            for (int j = 0; j < ertek.length && !(szinek[i].equals("M") && ertek[j].equals("X")); j++) {
-                if(j % 3 == 0){
+        for(int i=0;i<pakli.length;i++){
+            if(i % 3 == 0){
                     System.out.println("\n");
                 }
-                pakli[j] = ertek[j]+"."+szinek[i];
-                System.out.print(pakli[j] + "\t\t");
-            }
+            System.out.print(pakli[i] + "\t\t");
         }
         System.out.println("\n");
     }
