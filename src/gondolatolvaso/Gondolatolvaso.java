@@ -78,8 +78,23 @@ public class Gondolatolvaso {
                     System.out.printf("%-8s", tomb[i]);
                 }
                 break;
-        }
 
+            case 3:
+
+                for (int i = 1; i <= 7; i++) {
+                    tomb[i] = pakli[20 - (i - 1) * 3];
+                    tomb[i + 7] = pakli[21 - (i - 1) * 3];
+                    tomb[i + 14] = pakli[19 - (i - 1) * 3];
+                }
+
+                for (int i = 1; i < tomb.length; i++) {
+                    if (i % 3 == 1) {
+                        System.out.println("");
+                    }
+                    System.out.printf("%-8s", tomb[i]);
+                }
+                break;
+        }
     }
 
     public static void EzVolt() {
