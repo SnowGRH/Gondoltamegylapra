@@ -1,17 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package gondolatolvaso;
-
 import java.util.Scanner;
-
-
-
-
 public class Gondolatolvaso {
 
-    static Scanner sc = new Scanner(System.in);
     static String[] pakli = new String[22];
     
     public static void main(String[] args) {
@@ -34,15 +24,15 @@ public class Gondolatolvaso {
         
         for(int i=0;i<pakli.length;i++){
             if(i % 3 == 0){
-                    System.out.println("\n");
+                    System.out.println("");
                 }
-            System.out.print(pakli[i] + "\t\t");
+            System.out.printf("%-8s",pakli[i]);
         }
         System.out.println("\n");
     }
     
     public static int Melyik(){
-        
+        Scanner sc = new Scanner(System.in);
         System.out.println("melyik oszlop (1-3) : ");
         int oszlop = sc.nextInt();
         while(oszlop < 1 || oszlop > 3){
