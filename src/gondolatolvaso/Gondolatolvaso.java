@@ -60,12 +60,6 @@ public class Gondolatolvaso {
                     ujPakli[i + 14] = lapok[21 - (i - 1) * 3];
 
                 }
-                for (int i = 1; i < ujPakli.length; i++) {
-                    if (i % 3 == 1) {
-                        System.out.println("");
-                    }
-                    System.out.printf("%-8s", ujPakli[i]);
-                }
                 break;
             case 2:
                 for (int i = 1; i <= 7; i++) {
@@ -73,12 +67,6 @@ public class Gondolatolvaso {
                     ujPakli[i + 7] = lapok[20 - (i - 1) * 3];
                     ujPakli[i + 14] = lapok[21 - (i - 1) * 3];
 
-                }
-                for (int i = 1; i < ujPakli.length; i++) {
-                    if (i % 3 == 1) {
-                        System.out.println("");
-                    }
-                    System.out.printf("%-8s", ujPakli[i]);
                 }
                 break;
 
@@ -89,13 +77,6 @@ public class Gondolatolvaso {
                     ujPakli[i + 7] = lapok[21 - (i - 1) * 3];
                     ujPakli[i + 14] = lapok[19 - (i - 1) * 3];
                 }
-
-                for (int i = 1; i < ujPakli.length; i++) {
-                    if (i % 3 == 1) {
-                        System.out.println("");
-                    }
-                    System.out.printf("%-8s", ujPakli[i]);
-                }
                 break;
         }
         return ujPakli;
@@ -103,7 +84,7 @@ public class Gondolatolvaso {
     }
 
     public static void EzVolt(String[] lap) {
-        System.out.printf("A kiválasztott kártya ez volt:", lap[11]);
+        System.out.printf("A kiválasztott kártya ez volt: %s \n", lap[11]);
     }
 
 }
